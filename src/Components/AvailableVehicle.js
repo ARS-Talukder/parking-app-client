@@ -5,7 +5,7 @@ const AvailableVehicle = ({ a, index, time }) => {
     const handleCheckOut = () => {
         console.log(time)
         const updatedObject = { checkout: time };
-        fetch(`http://localhost:5000/vehicle?vehicle=${a.vehicleNumber}`, {
+        fetch(`https://parking-app-server.onrender.com/vehicle?vehicle=${a.vehicleNumber}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

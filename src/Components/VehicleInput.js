@@ -12,7 +12,7 @@ const VehicleInput = () => {
         const vehicleNumber = event.target.number.value;
         const vehicle = { driverName, vehicleNumber, checkin: time, checkout: '' };
         console.log(vehicle)
-        fetch('http://localhost:5000/vehicles', {
+        fetch('https://parking-app-server.onrender.com/vehicles', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

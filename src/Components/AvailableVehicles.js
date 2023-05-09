@@ -10,12 +10,12 @@ const AvailableVehicles = () => {
     const [allVehicles, setAllVehicles] = useState([]);
     const [availableVehicles, setAvailableVehicles] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/vehicles')
+        fetch('https://parking-app-server.onrender.com/vehicles')
             .then(res => res.json())
             .then(data => setAllVehicles(data));
     }, [])
     useEffect(() => {
-        fetch('http://localhost:5000/available-vehicles')
+        fetch('https://parking-app-server.onrender.com/available-vehicles')
             .then(res => res.json())
             .then(data => setAvailableVehicles(data));
     }, [])
